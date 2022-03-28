@@ -10,46 +10,46 @@ Calculations are done from the TransferService class where the different account
 ## REST API endpoints. all requests start with ~/users/
 
 ### User
-/ **GET**
+`/` **GET**
 > Returns all users in the DB.
 
-/{id} **GET**
+`/{id}` **GET**
 > Finds user by user_id.
 
-/owner?account-id=? **GET**
+`/owner?account-id=?` **GET**
 > Finds user based of account_id.
 
 ### Account
-/account?user-id=? **GET**
+`/account?user-id=?` **GET**
 > Returns all accounts by user_id.
 
-/account/id **GET**
+`/account/id` **GET**
 > Gets a specific account by account_id.
 
-/account **PUT**
+`/account` **PUT**
 > Takes a validated account as the request body and updates the DB.
 
 ### Transfer
-/account/transfer **POST**
+`/account/transfer` **POST**
 > Takes a valid Transfer as the request body, and will create a transfer and update the account balances if approved.
 
-/account/transfer?id=? **GET**
+`/account/transfer?id=?` **GET**
 > Gets all transfers by account ID.
 
-/account/transfer?id=?&status="PENDING" or "REJECTED" or "APPROVED" **GET**
+`/account/transfer?id=?&status="PENDING" or "REJECTED" or "APPROVED"` **GET**
 > Gets all transfers by account ID and transfer status. Use PENDING for all pending transfers, REJECTED for all rejected, etc. Do not use "" when using status=?
 
-/account/transfers **PUT**
+`/account/transfers` **PUT**
 > Takes a valid transfer and updates the DB. Will also execute transfer based off status and type.
 
-/account/transfers/{id} **GET**
+`/account/transfers/{id}` **GET**
 > Gets transfer by transfer ID.
 
 ### Login endpoints. All requests start with ~/
-/login **POST**
+`/login` **POST**
 > Takes a login DTO and logs in the user if authenticated.
 
-/register **POST**
+`/register` **POST**
 > Creates a new user, new users starts with 1 account with $1000 balance.
 
 ## Database schema
