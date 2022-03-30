@@ -17,7 +17,7 @@ Calculations are done from the TransferService class where the different account
 > Finds user by user_id.
 
 `/owner?account-id=?` **GET**
-> Finds user based of account_id.
+> Finds user based by account_id.
 
 ### Account
 `/account?user-id=?` **GET**
