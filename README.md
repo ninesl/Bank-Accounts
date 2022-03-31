@@ -7,7 +7,7 @@ Request transfers are automatically set to pending. The request can then be appr
 All calculations are done by sending HTTPRequests to the REST API. The front end is used to validate user input and send it to the API.\
 Calculations are done from the TransferService class where the different accounts' balance is updated in the DB.
 
-## REST API endpoints. all requests start with ~/users/
+## REST API endpoints. all requests start with ~/users
 
 ### User
 `/` **GET**
@@ -45,7 +45,7 @@ Calculations are done from the TransferService class where the different account
 `/account/transfers/{id}` **GET**
 > Gets transfer by transfer ID.
 
-### Login endpoints. All requests start with ~/
+### Login endpoints. All requests start with ~ (host)
 `/login` **POST**
 > Takes a login DTO and logs in the user if authenticated.
 
